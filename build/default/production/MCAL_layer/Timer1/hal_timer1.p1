@@ -1,0 +1,640 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"101 MCAL_layer/Timer1/hal_timer1.h
+[; ;MCAL_layer/Timer1/hal_timer1.h: 101: typedef struct{
+[s S274 `us 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 ]
+[n S274 . Timer1_Preload_Value Timer1_Prescaler_Value Timer1_Mode Timer1_Oscillator Timer1_Counter_Mode Timer1_WR_Reg_Mode Timer1_Reserved ]
+"5230 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
+[s S216 :2 `uc 1 :1 `uc 1 ]
+[n S216 . . NOT_T1SYNC ]
+"5234
+[s S217 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S217 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS T1RUN RD16 ]
+"5243
+[s S218 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S218 . . T1SYNC . T1CKPS0 T1CKPS1 ]
+"5250
+[s S219 :3 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S219 . . SOSCEN . T1RD16 ]
+"5229
+[u S215 `S216 1 `S217 1 `S218 1 `S219 1 ]
+[n S215 . . . . . ]
+"5257
+[v _T1CONbits `VS215 ~T0 @X0 0 e@4045 ]
+[v F3048 `(v ~T0 @X0 1 tf1`*CS274 ]
+"14 MCAL_layer/Timer1/hal_timer1.c
+[; ;MCAL_layer/Timer1/hal_timer1.c: 14: static __attribute__((inline)) void Timer1_Mode_Select(const Timer1_t *timer1_obj);
+[v _Timer1_Mode_Select `TF3048 ~T0 @X0 0 s ]
+[v F3051 `(v ~T0 @X0 1 tf1`*CS274 ]
+"15
+[; ;MCAL_layer/Timer1/hal_timer1.c: 15: static __attribute__((inline)) void Timer1_WR_Register_Size_config(const Timer1_t *timer1_obj);
+[v _Timer1_WR_Register_Size_config `TF3051 ~T0 @X0 0 s ]
+"118 MCAL_layer/Timer1/hal_timer1.h
+[; ;MCAL_layer/Timer1/hal_timer1.h: 118: Std_ReturnType Timer1_Write_value(const Timer1_t *timer1_obj, uint16_t value);
+[v _Timer1_Write_value `(uc ~T0 @X0 0 ef2`*CS274`us ]
+"5341 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
+[v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
+"5334
+[v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
+"54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
+[; <" PORTA equ 0F80h ;# ">
+"191
+[; <" PORTB equ 0F81h ;# ">
+"362
+[; <" PORTC equ 0F82h ;# ">
+"537
+[; <" PORTD equ 0F83h ;# ">
+"679
+[; <" PORTE equ 0F84h ;# ">
+"882
+[; <" LATA equ 0F89h ;# ">
+"994
+[; <" LATB equ 0F8Ah ;# ">
+"1106
+[; <" LATC equ 0F8Bh ;# ">
+"1218
+[; <" LATD equ 0F8Ch ;# ">
+"1330
+[; <" LATE equ 0F8Dh ;# ">
+"1382
+[; <" TRISA equ 0F92h ;# ">
+"1387
+[; <" DDRA equ 0F92h ;# ">
+"1604
+[; <" TRISB equ 0F93h ;# ">
+"1609
+[; <" DDRB equ 0F93h ;# ">
+"1826
+[; <" TRISC equ 0F94h ;# ">
+"1831
+[; <" DDRC equ 0F94h ;# ">
+"2048
+[; <" TRISD equ 0F95h ;# ">
+"2053
+[; <" DDRD equ 0F95h ;# ">
+"2270
+[; <" TRISE equ 0F96h ;# ">
+"2275
+[; <" DDRE equ 0F96h ;# ">
+"2434
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"2499
+[; <" PIE1 equ 0F9Dh ;# ">
+"2576
+[; <" PIR1 equ 0F9Eh ;# ">
+"2653
+[; <" IPR1 equ 0F9Fh ;# ">
+"2730
+[; <" PIE2 equ 0FA0h ;# ">
+"2796
+[; <" PIR2 equ 0FA1h ;# ">
+"2862
+[; <" IPR2 equ 0FA2h ;# ">
+"2928
+[; <" EECON1 equ 0FA6h ;# ">
+"2994
+[; <" EECON2 equ 0FA7h ;# ">
+"3001
+[; <" EEDATA equ 0FA8h ;# ">
+"3008
+[; <" EEADR equ 0FA9h ;# ">
+"3015
+[; <" EEADRH equ 0FAAh ;# ">
+"3022
+[; <" RCSTA equ 0FABh ;# ">
+"3027
+[; <" RCSTA1 equ 0FABh ;# ">
+"3232
+[; <" TXSTA equ 0FACh ;# ">
+"3237
+[; <" TXSTA1 equ 0FACh ;# ">
+"3488
+[; <" TXREG equ 0FADh ;# ">
+"3493
+[; <" TXREG1 equ 0FADh ;# ">
+"3500
+[; <" RCREG equ 0FAEh ;# ">
+"3505
+[; <" RCREG1 equ 0FAEh ;# ">
+"3512
+[; <" SPBRG equ 0FAFh ;# ">
+"3517
+[; <" SPBRG1 equ 0FAFh ;# ">
+"3524
+[; <" SPBRGH equ 0FB0h ;# ">
+"3531
+[; <" T3CON equ 0FB1h ;# ">
+"3643
+[; <" TMR3 equ 0FB2h ;# ">
+"3650
+[; <" TMR3L equ 0FB2h ;# ">
+"3657
+[; <" TMR3H equ 0FB3h ;# ">
+"3664
+[; <" CMCON equ 0FB4h ;# ">
+"3754
+[; <" CVRCON equ 0FB5h ;# ">
+"3833
+[; <" ECCP1AS equ 0FB6h ;# ">
+"3915
+[; <" PWM1CON equ 0FB7h ;# ">
+"3985
+[; <" BAUDCON equ 0FB8h ;# ">
+"3990
+[; <" BAUDCTL equ 0FB8h ;# ">
+"4157
+[; <" CCP2CON equ 0FBAh ;# ">
+"4236
+[; <" CCPR2 equ 0FBBh ;# ">
+"4243
+[; <" CCPR2L equ 0FBBh ;# ">
+"4250
+[; <" CCPR2H equ 0FBCh ;# ">
+"4257
+[; <" CCP1CON equ 0FBDh ;# ">
+"4354
+[; <" CCPR1 equ 0FBEh ;# ">
+"4361
+[; <" CCPR1L equ 0FBEh ;# ">
+"4368
+[; <" CCPR1H equ 0FBFh ;# ">
+"4375
+[; <" ADCON2 equ 0FC0h ;# ">
+"4446
+[; <" ADCON1 equ 0FC1h ;# ">
+"4531
+[; <" ADCON0 equ 0FC2h ;# ">
+"4650
+[; <" ADRES equ 0FC3h ;# ">
+"4657
+[; <" ADRESL equ 0FC3h ;# ">
+"4664
+[; <" ADRESH equ 0FC4h ;# ">
+"4671
+[; <" SSPCON2 equ 0FC5h ;# ">
+"4733
+[; <" SSPCON1 equ 0FC6h ;# ">
+"4803
+[; <" SSPSTAT equ 0FC7h ;# ">
+"5024
+[; <" SSPADD equ 0FC8h ;# ">
+"5031
+[; <" SSPBUF equ 0FC9h ;# ">
+"5038
+[; <" T2CON equ 0FCAh ;# ">
+"5109
+[; <" PR2 equ 0FCBh ;# ">
+"5114
+[; <" MEMCON equ 0FCBh ;# ">
+"5219
+[; <" TMR2 equ 0FCCh ;# ">
+"5226
+[; <" T1CON equ 0FCDh ;# ">
+"5329
+[; <" TMR1 equ 0FCEh ;# ">
+"5336
+[; <" TMR1L equ 0FCEh ;# ">
+"5343
+[; <" TMR1H equ 0FCFh ;# ">
+"5350
+[; <" RCON equ 0FD0h ;# ">
+"5483
+[; <" WDTCON equ 0FD1h ;# ">
+"5511
+[; <" HLVDCON equ 0FD2h ;# ">
+"5516
+[; <" LVDCON equ 0FD2h ;# ">
+"5781
+[; <" OSCCON equ 0FD3h ;# ">
+"5858
+[; <" T0CON equ 0FD5h ;# ">
+"5935
+[; <" TMR0 equ 0FD6h ;# ">
+"5942
+[; <" TMR0L equ 0FD6h ;# ">
+"5949
+[; <" TMR0H equ 0FD7h ;# ">
+"5956
+[; <" STATUS equ 0FD8h ;# ">
+"6027
+[; <" FSR2 equ 0FD9h ;# ">
+"6034
+[; <" FSR2L equ 0FD9h ;# ">
+"6041
+[; <" FSR2H equ 0FDAh ;# ">
+"6048
+[; <" PLUSW2 equ 0FDBh ;# ">
+"6055
+[; <" PREINC2 equ 0FDCh ;# ">
+"6062
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"6069
+[; <" POSTINC2 equ 0FDEh ;# ">
+"6076
+[; <" INDF2 equ 0FDFh ;# ">
+"6083
+[; <" BSR equ 0FE0h ;# ">
+"6090
+[; <" FSR1 equ 0FE1h ;# ">
+"6097
+[; <" FSR1L equ 0FE1h ;# ">
+"6104
+[; <" FSR1H equ 0FE2h ;# ">
+"6111
+[; <" PLUSW1 equ 0FE3h ;# ">
+"6118
+[; <" PREINC1 equ 0FE4h ;# ">
+"6125
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"6132
+[; <" POSTINC1 equ 0FE6h ;# ">
+"6139
+[; <" INDF1 equ 0FE7h ;# ">
+"6146
+[; <" WREG equ 0FE8h ;# ">
+"6158
+[; <" FSR0 equ 0FE9h ;# ">
+"6165
+[; <" FSR0L equ 0FE9h ;# ">
+"6172
+[; <" FSR0H equ 0FEAh ;# ">
+"6179
+[; <" PLUSW0 equ 0FEBh ;# ">
+"6186
+[; <" PREINC0 equ 0FECh ;# ">
+"6193
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"6200
+[; <" POSTINC0 equ 0FEEh ;# ">
+"6207
+[; <" INDF0 equ 0FEFh ;# ">
+"6214
+[; <" INTCON3 equ 0FF0h ;# ">
+"6306
+[; <" INTCON2 equ 0FF1h ;# ">
+"6376
+[; <" INTCON equ 0FF2h ;# ">
+"6493
+[; <" PROD equ 0FF3h ;# ">
+"6500
+[; <" PRODL equ 0FF3h ;# ">
+"6507
+[; <" PRODH equ 0FF4h ;# ">
+"6514
+[; <" TABLAT equ 0FF5h ;# ">
+"6523
+[; <" TBLPTR equ 0FF6h ;# ">
+"6530
+[; <" TBLPTRL equ 0FF6h ;# ">
+"6537
+[; <" TBLPTRH equ 0FF7h ;# ">
+"6544
+[; <" TBLPTRU equ 0FF8h ;# ">
+"6553
+[; <" PCLAT equ 0FF9h ;# ">
+"6560
+[; <" PC equ 0FF9h ;# ">
+"6567
+[; <" PCL equ 0FF9h ;# ">
+"6574
+[; <" PCLATH equ 0FFAh ;# ">
+"6581
+[; <" PCLATU equ 0FFBh ;# ">
+"6588
+[; <" STKPTR equ 0FFCh ;# ">
+"6694
+[; <" TOS equ 0FFDh ;# ">
+"6701
+[; <" TOSL equ 0FFDh ;# ">
+"6708
+[; <" TOSH equ 0FFEh ;# ">
+"6715
+[; <" TOSU equ 0FFFh ;# ">
+"18 MCAL_layer/Timer1/hal_timer1.c
+[; ;MCAL_layer/Timer1/hal_timer1.c: 18: static uint16_t Timer1_preload = 0x00;
+[v _Timer1_preload `us ~T0 @X0 1 s ]
+[i _Timer1_preload
+-> -> 0 `i `us
+]
+"30
+[; ;MCAL_layer/Timer1/hal_timer1.c: 30: Std_ReturnType Timer1_Initialize(const Timer1_t *timer1_obj){
+[v _Timer1_Initialize `(uc ~T0 @X0 1 ef1`*CS274 ]
+{
+[e :U _Timer1_Initialize ]
+[v _timer1_obj `*CS274 ~T0 @X0 1 r1 ]
+[f ]
+"31
+[; ;MCAL_layer/Timer1/hal_timer1.c: 31:     Std_ReturnType ret = (Std_ReturnType)0x01;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"32
+[; ;MCAL_layer/Timer1/hal_timer1.c: 32:     if(((void*)0) == timer1_obj)
+[e $ ! == -> -> -> 0 `i `*v `*CS274 _timer1_obj 276  ]
+"33
+[; ;MCAL_layer/Timer1/hal_timer1.c: 33:     {
+{
+"34
+[; ;MCAL_layer/Timer1/hal_timer1.c: 34:         ret = (Std_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"35
+[; ;MCAL_layer/Timer1/hal_timer1.c: 35:     }else
+}
+[e $U 277  ]
+[e :U 276 ]
+"36
+[; ;MCAL_layer/Timer1/hal_timer1.c: 36:     {
+{
+"38
+[; ;MCAL_layer/Timer1/hal_timer1.c: 38:         (T1CONbits.TMR1ON = 0);
+[e = . . _T1CONbits 1 0 -> -> 0 `i `uc ]
+"40
+[; ;MCAL_layer/Timer1/hal_timer1.c: 40:         (T1CONbits.T1CKPS = (timer1_obj->Timer1_Prescaler_Value));
+[e = . . _T1CONbits 1 4 . *U _timer1_obj 1 ]
+"42
+[; ;MCAL_layer/Timer1/hal_timer1.c: 42:         Timer1_Mode_Select(timer1_obj);
+[e ( _Timer1_Mode_Select (1 _timer1_obj ]
+"44
+[; ;MCAL_layer/Timer1/hal_timer1.c: 44:         Timer1_WR_Register_Size_config(timer1_obj);
+[e ( _Timer1_WR_Register_Size_config (1 _timer1_obj ]
+"46
+[; ;MCAL_layer/Timer1/hal_timer1.c: 46:         ret |= Timer1_Write_value(timer1_obj, timer1_obj->Timer1_Preload_Value);
+[e =| _ret -> ( _Timer1_Write_value (2 , _timer1_obj . *U _timer1_obj 0 `uc ]
+"48
+[; ;MCAL_layer/Timer1/hal_timer1.c: 48:         Timer1_preload = (timer1_obj->Timer1_Preload_Value);
+[e = _Timer1_preload . *U _timer1_obj 0 ]
+"76
+[; ;MCAL_layer/Timer1/hal_timer1.c: 76:         (T1CONbits.TMR1ON = 1);
+[e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
+"77
+[; ;MCAL_layer/Timer1/hal_timer1.c: 77:     }
+}
+[e :U 277 ]
+"78
+[; ;MCAL_layer/Timer1/hal_timer1.c: 78:     return ret;
+[e ) _ret ]
+[e $UE 275  ]
+"79
+[; ;MCAL_layer/Timer1/hal_timer1.c: 79: }
+[e :UE 275 ]
+}
+"90
+[; ;MCAL_layer/Timer1/hal_timer1.c: 90: Std_ReturnType Timer1_Deinitialize(const Timer1_t *timer1_obj){
+[v _Timer1_Deinitialize `(uc ~T0 @X0 1 ef1`*CS274 ]
+{
+[e :U _Timer1_Deinitialize ]
+[v _timer1_obj `*CS274 ~T0 @X0 1 r1 ]
+[f ]
+"91
+[; ;MCAL_layer/Timer1/hal_timer1.c: 91:     Std_ReturnType ret = (Std_ReturnType)0x01;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"92
+[; ;MCAL_layer/Timer1/hal_timer1.c: 92:     if(((void*)0) == timer1_obj)
+[e $ ! == -> -> -> 0 `i `*v `*CS274 _timer1_obj 279  ]
+"93
+[; ;MCAL_layer/Timer1/hal_timer1.c: 93:     {
+{
+"94
+[; ;MCAL_layer/Timer1/hal_timer1.c: 94:         ret = (Std_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"95
+[; ;MCAL_layer/Timer1/hal_timer1.c: 95:     }else
+}
+[e $U 280  ]
+[e :U 279 ]
+"96
+[; ;MCAL_layer/Timer1/hal_timer1.c: 96:     {
+{
+"98
+[; ;MCAL_layer/Timer1/hal_timer1.c: 98:         (T1CONbits.TMR1ON = 0);
+[e = . . _T1CONbits 1 0 -> -> 0 `i `uc ]
+"103
+[; ;MCAL_layer/Timer1/hal_timer1.c: 103:     }
+}
+[e :U 280 ]
+"104
+[; ;MCAL_layer/Timer1/hal_timer1.c: 104:     return ret;
+[e ) _ret ]
+[e $UE 278  ]
+"105
+[; ;MCAL_layer/Timer1/hal_timer1.c: 105: }
+[e :UE 278 ]
+}
+"117
+[; ;MCAL_layer/Timer1/hal_timer1.c: 117: Std_ReturnType Timer1_Write_value(const Timer1_t *timer1_obj, uint16_t value){
+[v _Timer1_Write_value `(uc ~T0 @X0 1 ef2`*CS274`us ]
+{
+[e :U _Timer1_Write_value ]
+[v _timer1_obj `*CS274 ~T0 @X0 1 r1 ]
+[v _value `us ~T0 @X0 1 r2 ]
+[f ]
+"118
+[; ;MCAL_layer/Timer1/hal_timer1.c: 118:     Std_ReturnType ret = (Std_ReturnType)0x01;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"119
+[; ;MCAL_layer/Timer1/hal_timer1.c: 119:     if(((void*)0) == timer1_obj)
+[e $ ! == -> -> -> 0 `i `*v `*CS274 _timer1_obj 282  ]
+"120
+[; ;MCAL_layer/Timer1/hal_timer1.c: 120:     {
+{
+"121
+[; ;MCAL_layer/Timer1/hal_timer1.c: 121:         ret = (Std_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"122
+[; ;MCAL_layer/Timer1/hal_timer1.c: 122:     }else
+}
+[e $U 283  ]
+[e :U 282 ]
+"123
+[; ;MCAL_layer/Timer1/hal_timer1.c: 123:     {
+{
+"124
+[; ;MCAL_layer/Timer1/hal_timer1.c: 124:         TMR1H = (value) >> 8;
+[e = _TMR1H -> >> -> _value `ui -> 8 `i `uc ]
+"125
+[; ;MCAL_layer/Timer1/hal_timer1.c: 125:         TMR1L = ((value) & 0x00ff);
+[e = _TMR1L -> & -> _value `ui -> -> 255 `i `ui `uc ]
+"126
+[; ;MCAL_layer/Timer1/hal_timer1.c: 126:     }
+}
+[e :U 283 ]
+"127
+[; ;MCAL_layer/Timer1/hal_timer1.c: 127:     return ret;
+[e ) _ret ]
+[e $UE 281  ]
+"128
+[; ;MCAL_layer/Timer1/hal_timer1.c: 128: }
+[e :UE 281 ]
+}
+"140
+[; ;MCAL_layer/Timer1/hal_timer1.c: 140: Std_ReturnType Timer1_Read_value(const Timer1_t *timer1_obj, uint16_t *value){
+[v _Timer1_Read_value `(uc ~T0 @X0 1 ef2`*CS274`*us ]
+{
+[e :U _Timer1_Read_value ]
+[v _timer1_obj `*CS274 ~T0 @X0 1 r1 ]
+[v _value `*us ~T0 @X0 1 r2 ]
+[f ]
+"141
+[; ;MCAL_layer/Timer1/hal_timer1.c: 141:     Std_ReturnType ret = (Std_ReturnType)0x01;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> -> 1 `i `uc ]
+"142
+[; ;MCAL_layer/Timer1/hal_timer1.c: 142:     uint8_t Timer1_L = 0x00;
+[v _Timer1_L `uc ~T0 @X0 1 a ]
+[e = _Timer1_L -> -> 0 `i `uc ]
+"143
+[; ;MCAL_layer/Timer1/hal_timer1.c: 143:     uint8_t Timer1_H = 0x00;
+[v _Timer1_H `uc ~T0 @X0 1 a ]
+[e = _Timer1_H -> -> 0 `i `uc ]
+"144
+[; ;MCAL_layer/Timer1/hal_timer1.c: 144:     if((((void*)0) == timer1_obj)||(((void*)0) == value))
+[e $ ! || == -> -> -> 0 `i `*v `*CS274 _timer1_obj == -> -> -> 0 `i `*v `*us _value 285  ]
+"145
+[; ;MCAL_layer/Timer1/hal_timer1.c: 145:     {
+{
+"146
+[; ;MCAL_layer/Timer1/hal_timer1.c: 146:         ret = (Std_ReturnType)0x00;
+[e = _ret -> -> 0 `i `uc ]
+"147
+[; ;MCAL_layer/Timer1/hal_timer1.c: 147:     }else
+}
+[e $U 286  ]
+[e :U 285 ]
+"148
+[; ;MCAL_layer/Timer1/hal_timer1.c: 148:     {
+{
+"149
+[; ;MCAL_layer/Timer1/hal_timer1.c: 149:         Timer1_L = TMR1L;
+[e = _Timer1_L _TMR1L ]
+"150
+[; ;MCAL_layer/Timer1/hal_timer1.c: 150:         Timer1_H = TMR1H;
+[e = _Timer1_H _TMR1H ]
+"151
+[; ;MCAL_layer/Timer1/hal_timer1.c: 151:         *value = (uint16_t)((Timer1_H << 8) + Timer1_L);
+[e = *U _value -> + << -> _Timer1_H `i -> 8 `i -> _Timer1_L `i `us ]
+"152
+[; ;MCAL_layer/Timer1/hal_timer1.c: 152:     }
+}
+[e :U 286 ]
+"153
+[; ;MCAL_layer/Timer1/hal_timer1.c: 153:     return ret;
+[e ) _ret ]
+[e $UE 284  ]
+"154
+[; ;MCAL_layer/Timer1/hal_timer1.c: 154: }
+[e :UE 284 ]
+}
+[v F3071 `(v ~T0 @X0 1 tf1`*CS274 ]
+"159
+[; ;MCAL_layer/Timer1/hal_timer1.c: 159: static __attribute__((inline)) void Timer1_Mode_Select(const Timer1_t *timer1_obj){
+[v _Timer1_Mode_Select `TF3071 ~T0 @X0 1 s ]
+{
+[e :U _Timer1_Mode_Select ]
+[v _timer1_obj `*CS274 ~T0 @X0 1 r1 ]
+[f ]
+"161
+[; ;MCAL_layer/Timer1/hal_timer1.c: 161:     if(0 == timer1_obj->Timer1_Mode){
+[e $ ! == -> 0 `i -> . *U _timer1_obj 2 `i 288  ]
+{
+"162
+[; ;MCAL_layer/Timer1/hal_timer1.c: 162:         (T1CONbits.TMR1CS = 0);
+[e = . . _T1CONbits 1 1 -> -> 0 `i `uc ]
+"163
+[; ;MCAL_layer/Timer1/hal_timer1.c: 163:     }
+}
+[e $U 289  ]
+"164
+[; ;MCAL_layer/Timer1/hal_timer1.c: 164:     else if(1 == timer1_obj->Timer1_Mode){
+[e :U 288 ]
+[e $ ! == -> 1 `i -> . *U _timer1_obj 2 `i 290  ]
+{
+"165
+[; ;MCAL_layer/Timer1/hal_timer1.c: 165:         (T1CONbits.TMR1CS = 1);
+[e = . . _T1CONbits 1 1 -> -> 1 `i `uc ]
+"167
+[; ;MCAL_layer/Timer1/hal_timer1.c: 167:         if(1 == timer1_obj->Timer1_Counter_Mode){
+[e $ ! == -> 1 `i -> . *U _timer1_obj 4 `i 291  ]
+{
+"168
+[; ;MCAL_layer/Timer1/hal_timer1.c: 168:             (T1CONbits.T1SYNC = 1);
+[e = . . _T1CONbits 2 1 -> -> 1 `i `uc ]
+"169
+[; ;MCAL_layer/Timer1/hal_timer1.c: 169:         }
+}
+[e $U 292  ]
+"170
+[; ;MCAL_layer/Timer1/hal_timer1.c: 170:         else if(0 == timer1_obj->Timer1_Counter_Mode){
+[e :U 291 ]
+[e $ ! == -> 0 `i -> . *U _timer1_obj 4 `i 293  ]
+{
+"171
+[; ;MCAL_layer/Timer1/hal_timer1.c: 171:             (T1CONbits.T1SYNC = 0);
+[e = . . _T1CONbits 2 1 -> -> 0 `i `uc ]
+"172
+[; ;MCAL_layer/Timer1/hal_timer1.c: 172:         }
+}
+[e $U 294  ]
+"173
+[; ;MCAL_layer/Timer1/hal_timer1.c: 173:         else{ }
+[e :U 293 ]
+{
+}
+[e :U 294 ]
+[e :U 292 ]
+"174
+[; ;MCAL_layer/Timer1/hal_timer1.c: 174:     }
+}
+[e $U 295  ]
+"175
+[; ;MCAL_layer/Timer1/hal_timer1.c: 175:     else{ }
+[e :U 290 ]
+{
+}
+[e :U 295 ]
+[e :U 289 ]
+"176
+[; ;MCAL_layer/Timer1/hal_timer1.c: 176: }
+[e :UE 287 ]
+}
+[v F3074 `(v ~T0 @X0 1 tf1`*CS274 ]
+"178
+[; ;MCAL_layer/Timer1/hal_timer1.c: 178: static __attribute__((inline)) void Timer1_WR_Register_Size_config(const Timer1_t *timer1_obj){
+[v _Timer1_WR_Register_Size_config `TF3074 ~T0 @X0 1 s ]
+{
+[e :U _Timer1_WR_Register_Size_config ]
+[v _timer1_obj `*CS274 ~T0 @X0 1 r1 ]
+[f ]
+"179
+[; ;MCAL_layer/Timer1/hal_timer1.c: 179:     if(1==timer1_obj->Timer1_WR_Reg_Mode){
+[e $ ! == -> 1 `i -> . *U _timer1_obj 5 `i 297  ]
+{
+"180
+[; ;MCAL_layer/Timer1/hal_timer1.c: 180:         (T1CONbits.RD16 = 1);
+[e = . . _T1CONbits 1 6 -> -> 1 `i `uc ]
+"181
+[; ;MCAL_layer/Timer1/hal_timer1.c: 181:     }
+}
+[e $U 298  ]
+"182
+[; ;MCAL_layer/Timer1/hal_timer1.c: 182:     else if(0==timer1_obj->Timer1_WR_Reg_Mode){
+[e :U 297 ]
+[e $ ! == -> 0 `i -> . *U _timer1_obj 5 `i 299  ]
+{
+"183
+[; ;MCAL_layer/Timer1/hal_timer1.c: 183:         (T1CONbits.RD16 = 0);
+[e = . . _T1CONbits 1 6 -> -> 0 `i `uc ]
+"184
+[; ;MCAL_layer/Timer1/hal_timer1.c: 184:     }
+}
+[e $U 300  ]
+"185
+[; ;MCAL_layer/Timer1/hal_timer1.c: 185:     else{ }
+[e :U 299 ]
+{
+}
+[e :U 300 ]
+[e :U 298 ]
+"186
+[; ;MCAL_layer/Timer1/hal_timer1.c: 186: }
+[e :UE 296 ]
+}
