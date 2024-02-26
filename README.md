@@ -19,3 +19,7 @@ This repo is created by Mohammed Khairallah containing a Temperature Monitoring 
 
 ![Temperature Monitoring System Design](https://github.com/MohammedKhairallah/Temperature-Monitoring-System/assets/143942499/64ba6c23-0e88-40a9-9243-2176d6676d24)
 
+
+## Author:
+
+- [Mohammed Khairallah](https://www.linkedin.com/in/mohammed-khairallah/)
